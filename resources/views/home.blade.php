@@ -26,7 +26,8 @@
                         <div class="card-block clearfix">
                             <div class="pull-right">
                                 <p class="h6 text-muted mt-0 mb-1">{{__('Company')}}</p>
-                                <p class="h3 text-primary mt-2 mb-0">1</p>
+                                @php $company_count = App\Models\Company::get()->count();  @endphp
+                                <p class="h3 text-primary mt-2 mb-0">{{$company_count}}</p>
                             </div>
                             <div class="mr-5">
                                 <span class="img-avatar img-avatar-48 bg-blue bg-inverse"><i class="fa fa-building fa-1-5x"></i></span>
@@ -39,7 +40,8 @@
                         <div class="card-block clearfix">
                             <div class="pull-right">
                                 <p class="h6 text-muted mt-0 mb-1">{{__('Employee')}}</p>
-                                <p class="h3 text-primary mt-2 mb-0">2</p>
+                                @php $employee_count = App\Models\Employee::get()->count();  @endphp
+                                <p class="h3 text-primary mt-2 mb-0">{{$employee_count}}</p>
                             </div>
                             <div class="mr-5">
                                 <span class="img-avatar img-avatar-48 bg-gray-light-o"><i class="fa fa-user fa-1-5x"></i></span>
