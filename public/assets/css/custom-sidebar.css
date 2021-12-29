@@ -1,0 +1,363 @@
+/*--------------------------------------------
+
+    Template Name: srtdash - Bootstrap 4 Admin and Ui Kit
+    Template URI: http://tf.itech-theme.com/srtdash-preview
+    Description: This is Bootstrap 4 Admin Template and Ui Kit
+    Author: cdibrandstudio
+    Author https://themeforest.net/user/cdibrandstudio
+    Version: 1.0
+
+----------------------------------------------
+
+    CSS INDEX
+    ===================
+
+    1. Core Css
+    2. Dashboard One
+        2.1 Sidebar Menu
+            2.1.1 Horizontal Menu
+        2.2 Header Area
+        2.3 Page Title Area
+        2.4 Fact Area
+        2.5 Overview
+        2.6 Market value
+        2.7 Live Crypto Price
+        2.8 Trading History
+        2.9 Letest Post
+    3. Dashboard Two
+    4. Dashboard Three
+    5. Bar Chart
+    6. Line Chart
+    7. Pie Chart
+    8. Accroding
+    9. Alert
+   10. Badge
+   11. Button
+   12. Cards
+   13. Dropdown Button
+   14. List Group
+   15. Modal
+   16. Pagination
+   17. Form
+   18. Icons
+   19. Table Basic
+   20. Datatable
+   21. Map
+   22. Invoice
+   23. Login
+   24. Pricing
+   25. 404 Page
+   26. Offset Sidebar
+
+-----------------------------------------------------------------------------------*/
+
+
+/*------------------------- 1. Core Css -------------------*/
+
+.page-container {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    padding-left: 280px;
+    -webkit-transition: padding-left 0.3s ease 0s;
+    transition: padding-left 0.3s ease 0s;
+}
+
+.sbar_collapsed.page-container {
+    padding-left: 0;
+}
+
+.card {
+    border: none;
+    border-radius: 4px;
+    background-color: #fff;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.card:hover {
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.02);
+}
+
+.card-body {
+    padding: 25.6px;
+    padding: 1.6rem;
+}
+
+.h-full {
+    height: 100%;
+}
+
+.main-content {
+    width: 100%;
+    background: #F3F8FB;
+}
+
+.main-content-inner {
+    padding: 0 30px 50px;
+}
+
+/*------------------------- END Core Css -------------------*/
+
+
+/*-------------------- 2.1 Sidebar Menu -------------------*/
+
+.sidebar-menuc {
+    position: relative;
+    left: 0;
+    top: 0;
+    z-index: 99;
+    height: 100vh;
+    width: 380px;
+    /* overflow: hidden; */
+    /* background: #303641; */
+    /* box-shadow: 2px 0 32px rgba(0, 0, 0, 0.05); */
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.sbar_collapsed .sidebar-menuc {
+    left: -280px;
+}
+
+.main-menuc {
+    height: calc(100% - 100px);
+    /* overflow: hidden; */
+    padding: 20px 10px 0 0;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.menu-innerc {
+    /* overflow-y: scroll; */
+    height: 100%;
+}
+
+.slimScrollBarc {
+    background: #2942fa!important;
+    opacity: 0.1!important;
+}
+
+.sidebar-headerc {
+    padding: 19px 32px 20px;
+    background: #303641;
+    border-bottom: 1px solid #343e50;
+}
+.sidebar-menuc .logoc{
+    text-align: center;
+}
+.logoc a {
+    display: inline-block;
+    max-width: 120px;
+}
+
+.metismenuc >li >a {
+    padding-left: 32px!important;
+}
+.metismenuc li a {
+    position: relative;
+    display: block;
+    color: #8d97ad;
+    font-size: 15px;
+    text-transform: capitalize;
+    padding: 15px 15px;
+    letter-spacing: 0;
+    font-weight: 400;
+}
+
+.metismenuc li a i {
+    color: #6a56a5;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.metismenuc li a:after {
+    position: absolute;
+    content: '\f107';
+    font-family: fontawesome;
+    right: 15px;
+    top: 12px;
+    color: #8d97ad;
+    font-size: 20px;
+}
+
+.metismenuc li.active>a:after {
+    content: '\f106';
+}
+
+.metismenuc li a:only-child:after {
+    content: '';
+}
+
+.metismenuc li a span {
+    margin-left: 10px;
+}
+
+.metismenuc li.active>a,
+.metismenuc li:hover>a {
+    color: #000000;
+}
+
+.metismenuc li li a {
+    padding: 8px 20px;
+}
+
+.metismenuc li ul {
+    padding-left: 37px;
+}
+
+.metismenuc >li:hover>a,
+.metismenuc >li.active>a {
+    color: #000000;
+    background: #ccc;
+}
+
+.metismenuc li:hover>a,
+.metismenuc li.active>a {
+    color: #000000;
+}
+
+.metismenuc li:hover>a i,
+.metismenuc li.active>a i {
+    color: #000000;
+}
+
+.metismenuc li li a:after {
+    top: 6px;
+}
+
+/*-------------------- END Sidebar Menu -------------------*/
+
+
+/*!
+* metismenu - v2.7.8
+* A jQuery menu plugin
+* https://github.com/onokumus/metismenu#readme
+*
+* Made by Osman Nuri Okumus <onokumus@gmail.com> (https://github.com/onokumus)
+* Under MIT License
+*/
+.metismenuc .arrow {
+    float: right;
+    line-height: 1.42857;
+  }
+  *[dir="rtl"] .metismenuc .arrow {
+    float: left;
+  }
+
+  /*
+   * Require Bootstrap 3.x
+   * https://github.com/twbs/bootstrap
+  */
+
+  .metismenuc .glyphicon.arrow:before {
+    content: "\e079";
+  }
+  .metismenuc .active > a > .glyphicon.arrow:before {
+    content: "\e114";
+  }
+
+  /*
+   * Require Font-Awesome
+   * http://fortawesome.github.io/Font-Awesome/
+  */
+
+  .metismenuc .fa.arrow:before {
+    content: "\f104";
+  }
+  .metismenuc .active > a > .fa.arrow:before {
+    content: "\f107";
+  }
+
+  /*
+   * Require Ionicons
+   * http://ionicons.com/
+  */
+
+  .metismenuc .ion.arrow:before {
+    content: "\f3d2"
+  }
+  .metismenuc .active > a > .ion.arrow:before {
+    content: "\f3d0";
+  }
+  .metismenuc .plus-times {
+    float: right;
+  }
+  *[dir="rtl"] .metismenuc .plus-times {
+    float: left;
+  }
+  .metismenuc .fa.plus-times:before {
+    content: "\f067";
+  }
+  .metismenuc .active > a > .fa.plus-times {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  .metismenuc .plus-minus {
+    float: right;
+  }
+  *[dir="rtl"] .metismenuc .plus-minus {
+    float: left;
+  }
+  .metismenuc .fa.plus-minus:before {
+    content: "\f067";
+  }
+  .metismenuc .active > a > .fa.plus-minus:before {
+    content: "\f068";
+  }
+  .metismenuc .collapse {
+    display: none;
+  }
+  .metismenuc .collapse.in {
+    display: block;
+  }
+  .metismenuc .collapsing {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    transition-timing-function: ease;
+    transition-duration: .35s;
+    transition-property: height, visibility;
+  }
+
+  .metismenuc .has-arrow {
+    position: relative;
+  }
+
+  .metismenuc .has-arrow::after {
+    position: absolute;
+    content: '';
+    width: .5em;
+    height: .5em;
+    border-width: 1px 0 0 1px;
+    border-style: solid;
+    border-color: initial;
+    right: 1em;
+    -webkit-transform: rotate(-45deg) translate(0, -50%);
+    transform: rotate(-45deg) translate(0, -50%);
+    -webkit-transform-origin: top;
+    transform-origin: top;
+    top: 50%;
+    transition: all .3s ease-out;
+  }
+
+  *[dir="rtl"] .metismenuc .has-arrow::after {
+    right: auto;
+    left: 1em;
+    -webkit-transform: rotate(135deg) translate(0, -50%);
+    transform: rotate(135deg) translate(0, -50%);
+  }
+
+  .metismenuc .active > .has-arrow::after,
+  .metismenuc .has-arrow[aria-expanded="true"]::after {
+    -webkit-transform: rotate(-135deg) translate(0, -50%);
+    transform: rotate(-135deg) translate(0, -50%);
+  }
+
+  *[dir="rtl"] .metismenuc .active > .has-arrow::after,
+  *[dir="rtl"] .metismenuc .has-arrow[aria-expanded="true"]::after {
+    -webkit-transform: rotate(225deg) translate(0, -50%);
+    transform: rotate(225deg) translate(0, -50%);
+  }
+
+  /*# sourceMappingURL=metisMenu.css.map */
