@@ -6,7 +6,7 @@
     <div class="sidebar-menu">
         <div class="sidebar-header">
             <div class="logo">
-                <a href="{{ url('dashboard') }}" style="color:#fff; font-size: 25px;">{{__('Mini CRM')}}</a>
+                <a href="{{ url('dashboard') }}" style="color: #fff; font-size: 25px;">{{__('Mini CRM')}}</a>
             </div>
         </div>
         <div class="main-menu">
